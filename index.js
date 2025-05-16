@@ -3,7 +3,7 @@ const express = require('express');
 const { MongoClient, ObjectId } = require('mongodb');
 // configura a url do banco
 // const url="mongodb://127.0.0.1:27017";
-const url = "mongodb+srv://bandoru21:lT2MMxfaOcMByag8@cluster0.980ltfn.mongodb.net"
+const url = "mongodb+srv://bandoru21:lT2MMxfaOcMByag8@cluster0.980ltfn.mongodb.net";
 // nome do banco de dados
 const dbName = "backend-abril-24";
 // cria um cliente com a url criada
@@ -96,7 +96,7 @@ async function main(){
     res.send("Item Removido com Sucesso");
   })
 
-  app.listen(3000);
+  app.listen(Process.env.PORT || 3000);
 
 }
 
